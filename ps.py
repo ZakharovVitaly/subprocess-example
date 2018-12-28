@@ -9,7 +9,7 @@ def shell(cmd, user):
    #out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
    #return out.strip()
 
-#This code is protected from that type of injection
+#This code do the same thing but it is protected from that type of injection
     with open(os.devnull, 'wb') as devnull:
         first = sp.Popen(shlex.split(cmd), stdout=sp.PIPE, stderr=devnull, shell=False)
         if first:
