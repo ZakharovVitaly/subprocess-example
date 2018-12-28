@@ -1,1 +1,1 @@
-Simple example how to prevent shell ingections in Python Shell wrappers. This is a wrapper for "ps" system utility which can be used for checking processes of partucular user (or all available) but do not use shell special sequences to inject maliscious commands.
+Simple example how to prevent shell injections in Python Shell wrappers. This is a wrapper for "ps" system utility which can be used for checking processes of partucular user (or all available) but do not use shell special sequences to inject maliscious commands.
