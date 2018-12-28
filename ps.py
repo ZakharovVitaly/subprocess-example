@@ -11,9 +11,9 @@ def shell(cmd, user):
             second = sp.Popen(shlex.split("/bin/egrep '^" + user + "'"), stdin=first.stdout, stdout=sp.PIPE, stderr=devnull, shell=False)
             first.stdout.close()
             out = second.communicate()[0]
+            return out.strip()
         else:
             return None
-        return out.strip()
 
 if __name__ == '__main__':
     try:
