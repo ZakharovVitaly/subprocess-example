@@ -8,7 +8,7 @@ def shell(cmd, user):
     with open(os.devnull, 'wb') as devnull:
         first = sp.Popen(shlex.split(cmd), stdout=sp.PIPE, stderr=devnull, shell=False)
         if first:
-            second = sp.Popen(shlex.split("egrep '^" + user + "'"), stdin=first.stdout, stdout=sp.PIPE, stderr=devnull, shell=False)
+            second = sp.Popen(shlex.split("/bin/egrep '^" + user + "'"), stdin=first.stdout, stdout=sp.PIPE, stderr=devnull, shell=False)
             first.stdout.close()
             out = second.communicate()[0]
         else:
