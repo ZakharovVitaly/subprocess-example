@@ -7,7 +7,7 @@ import shlex
 def shell(cmd, user):
 #This is injectable code through `user` variable
 #out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
-#return out
+#return out.strip()
 
 #This code is uninjectable
     with open(os.devnull, 'wb') as devnull:
