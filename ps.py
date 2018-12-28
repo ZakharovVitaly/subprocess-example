@@ -6,10 +6,10 @@ import shlex
 
 def shell(cmd, user):
 #This is injectable but simple and common code example that could receive malicious parameters through `user` variable
-   #out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
-   #Or more realistic variation but vulnerable too
-   #out = os.popen(cmd + ' | /bin/egrep ^' + user + ' 2>/dev/null').read()
-   #return out.strip()
+    #out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
+#Or more realistic variation but vulnerable too
+    #out = os.popen(cmd + ' | /bin/egrep ^' + user + ' 2>/dev/null').read()
+    #return out.strip()
 
 #This code do the same thing but it is protected from that type of injection
     with open(os.devnull, 'wb') as devnull:
