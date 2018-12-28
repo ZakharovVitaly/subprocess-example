@@ -18,6 +18,7 @@ def shell(cmd, user):
 if __name__ == '__main__':
     try:
         cmd = '/bin/ps -axwug'
+        #cmd = '/bin/ps -ef'
         user = raw_input('Select user to get info: ')
         result = shell(cmd, user)
         if result:
