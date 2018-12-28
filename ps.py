@@ -5,11 +5,11 @@ import subprocess as sp
 import shlex
 
 def shell(cmd, user):
-#This is injectable but simple and common code example could receive malicious parameters through `user` variable
+#This is injectable but simple and common code example that could receive malicious parameters through `user` variable
    #out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
    #return out.strip()
 
-#This code is protected from injection
+#This code is protected from that type of injection
     with open(os.devnull, 'wb') as devnull:
         first = sp.Popen(shlex.split(cmd), stdout=sp.PIPE, stderr=devnull, shell=False)
         if first:
