@@ -6,8 +6,8 @@ import shlex
 
 def shell(cmd, user):
 #This is injectable code through `user` variable
-#out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
-#return out.strip()
+   #out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
+   #return out.strip()
 
 #This code is protected from injection
     with open(os.devnull, 'wb') as devnull:
