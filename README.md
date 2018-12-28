@@ -18,6 +18,6 @@ $ ./ps.py
 
 Select user to get info: avahi ; rm -rf /*
 
-No such user or wrong parameteres: avahi ; rm -rf /*
+No such user or wrong parameters: avahi ; rm -rf /*
 
 
