@@ -5,10 +5,14 @@ import subprocess as sp
 import shlex
 
 def shell(cmd, user):
+#This is injectable code through `user` variable
+#out = os.popen(cmd + ' | /bin/egrep ^' + user).read()
+#return out
+
+#This code is uninjectable
     with open(os.devnull, 'wb') as devnull:
         first = sp.Popen(shlex.split(cmd), stdout=sp.PIPE, stderr=devnull, shell=False)
         if first:
-            #Potentially dangerous shell call which presumably may be injected through `user` variable but not
             second = sp.Popen(shlex.split('/bin/egrep ^' + user), stdin=first.stdout, stdout=sp.PIPE, stderr=devnull, shell=False)
             first.stdout.close()
             out = second.communicate()[0]
