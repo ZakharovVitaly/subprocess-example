@@ -3,12 +3,21 @@ Simple secure code demonstration how to prevent Shell injections in Python Shell
 
 Example of usage:
 
-$./ps.py 
+$./ps.py
+
 Select user to get info: avahi
+
 avahi      362  0.0  0.0  47140  3576 ?        Ss   16:46   0:00 avahi-daemon: running [linlap.local]
+
 avahi      379  0.0  0.0  47016   352 ?        S    16:46   0:00 avahi-daemon: chroot helper
 
-$ ./ps.py 
+
+
+
+$ ./ps.py
+
 Select user to get info: avahi ; rm -rf /*
+
 No such user or wrong parameteres: avahi ; rm -rf /*
+
 
