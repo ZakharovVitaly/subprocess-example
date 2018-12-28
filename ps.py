@@ -32,7 +32,7 @@ if __name__ == '__main__':
             print result
             sys.exit(0)
         else:
-            print 'No such user or wrong parameteres: ' + user
+            print 'No such user or wrong parameters: ' + user
             sys.exit(1)
     except KeyboardInterrupt:
         sys.exit(0)
