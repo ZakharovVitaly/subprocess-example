@@ -28,6 +28,7 @@ if __name__ == '__main__':
         result = shell(cmd, user)
         if result:
             print result
+            sys.exit(0)
         else:
             print 'No such user or wrong parameteres: ' + user
             sys.exit(1)
